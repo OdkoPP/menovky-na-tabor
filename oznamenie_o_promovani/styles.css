@@ -1,0 +1,97 @@
+/* Nastavenie okrajov strany pri tlaceni */
+@page {margin: 10mm}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+/* Zakladny rozmer a zobrazenie */
+.card-container {
+    width: 130mm;
+    height: 90mm;
+    border: 1px solid rgb(212, 212, 212);
+    /* Aby sa menovka pri tlaceni neodsekla na konci strany */
+    page-break-inside: avoid;
+    /* font-family: "Courier New", Courier, monospace; */
+}
+
+.card-container:nth-last-of-type(1) {
+    position: absolute;
+    left: 2mm;
+    top: 2mm;
+}
+
+.card-container:nth-last-of-type(2) {
+    position: absolute;
+    right: 2mm;
+    top: 2mm;
+}
+
+.card-container:nth-last-of-type(3) {
+    position: absolute;
+    left: 2mm;
+    bottom: 2mm;
+}
+
+.card-container:nth-last-of-type(4) {
+    position: absolute;
+    right: 2mm;
+    bottom: 2mm;
+}
+
+/* Okraj */
+.card-container > div {
+    padding: 10mm;
+    padding-top: 12mm;
+}
+
+/* Logo fakulty */
+.card-container .faculty-logo img {
+    width: 20mm;
+    position: absolute;
+    left: 10mm;
+    top: 12mm;
+}
+
+/* Meno */
+.card-container .person-name {
+    font-size: 200%;
+    margin-bottom: 7mm;
+    font-weight: bold;
+    line-height: 8mm;
+}
+
+/* Text oznámenia */
+.card-container .announcement {
+    padding-bottom: 7mm;
+}
+
+/* Titul */
+.card-container .degree {
+    font-size: 200%;
+    padding-bottom: 5mm;
+    font-weight: bold;
+    padding-left: 1mm;
+}
+
+/* Adresa */
+.card-container .address {
+    padding-top: 1mm;
+    font-size: 70%;
+    position: relative;
+    float: left;
+}
+
+/* Adresa */
+.card-container .email {
+    padding-top: 1mm;
+    font-size: 70%;
+    position: relative;
+    float: right;
+}

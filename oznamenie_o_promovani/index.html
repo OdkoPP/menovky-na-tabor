@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Oznamenie o promovani</title>
+  <meta name="description" content="Menovky na tabor">
+  <meta name="author" content="OdkoPP">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" media="print" href="print-styles.css">
+</head>
+
+<body>
+  <div class="container"></div>
+
+  <script src="../lib/jquery-3.5.1.min.js"></script>
+  <script>
+    function createCards() {
+      $('.container').empty();
+
+      [...Array(4)].map( e => {
+        $('.container')
+          .append(
+            `<div class="card-container" style="text-align: center; float: left !important">
+              <div>
+                <div class="faculty-logo">
+                  <img src="./fiit_logo.jpg">
+                </div>
+                <div class="person-name">My Name</div>
+                <div class="announcement">
+                Vám s potešením oznamuje,
+                <br>
+                že dňa 20. júna 2020 úspešne ukončil štúdium
+                <br>
+                na Fakulte informatiky a informačných technológií
+                <br>
+                Slovenskej technickej univerzity v Bratislave
+                <br>
+                a bol mu udelený titul</div>
+                <div class="degree">inžinier</div>
+                <hr>
+                <div class="address">my address</div>
+                <div class="email">myemail@gmail.com</div>
+              </div>
+            </div>`
+          );
+      });
+    }
+
+    $( document ).ready(createCards);
+  </script>
+</body>
+</html>
